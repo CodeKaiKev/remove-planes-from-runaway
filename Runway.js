@@ -15,4 +15,17 @@ class Runway {
         }
         Runway.planes.push(plane)
     }
+
+    remove(plane) {
+        if(Runway.planes.includes(plane)) { 
+            let i = Runway.planes.indexOf(plane);
+            console.log(i);
+            console.log("Popping");
+            Runway.planes.splice(i, 1);
+        } else{
+            throw new Error ("no plane!")
+        }
+    }
 }
+
+module.exports = Runway;
